@@ -1,5 +1,7 @@
 import ExpenseItem from './components/ExpenseItem';
 
+//Use props to pass some value
+
 function App() {
   const expenses = [
     {
