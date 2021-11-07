@@ -3,7 +3,9 @@ import React from 'react';
 import Expenses from './components/Expenses/Expenses';
 
 const App = () => {
-  const expenses = [
+  // useRef method helps you to avoid re-defined the variable after re-rendering component
+  // or if the expenses variable will not change, you can define the expenses out of the component
+  const expenses = useRef([
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -23,7 +25,7 @@ const App = () => {
       amount: 450,
       date: new Date(2021, 5, 12),
     },
-  ];
+  ]).current;
 
   // return React.createElement(
   //   'div',
