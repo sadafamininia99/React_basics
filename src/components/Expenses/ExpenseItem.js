@@ -11,7 +11,13 @@ const ExpenseItem = (props) => {
   //   console.log('clicked')
   // };
   //function clickHandelrz` (){}
+  //array destructuring 
+  //title =props 
+  //setttitle =for seet new title
   const [title ,setTitle] =useState(props.title);
+  console.log('expense item evalueted by react ');
+
+  
   const clickHandler =() =>{
     setTitle('Updated!!!!');
     console.log(title);
@@ -29,5 +35,9 @@ const ExpenseItem = (props) => {
     </Card>
   );
 }
+//all hookes strted with use keyword 
+// we use const decleration for ={
+
+
 
 export default ExpenseItem;
