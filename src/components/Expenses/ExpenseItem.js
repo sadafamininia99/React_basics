@@ -12,6 +12,7 @@ const ExpenseItem = (props) => {
         <h2>{props.title}</h2>
         <div className='expense-item__price'>${props.amount}</div>
       </div>
+   <butoon onClick={() => {console.log('clicked')}}>changed items</butoon>
     </Card>
   );
 }
