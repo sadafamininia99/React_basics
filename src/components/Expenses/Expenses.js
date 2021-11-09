@@ -1,21 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
+import ExpensesFilter from './ExpensesFilter';
 import './Expenses.css';
 
-const Expenses = ({ items }) => {
-  return (
-    <Card className="expenses">
-      {items.map(item => <ExpenseItem
-        title={item.title}
-        amount={item.amount}
-        date={item.date}
-      />)}
-    </Card>
-  );
-}
-//map throw the expense items
+const Expenses = (props) => {
+  const [filteredYear, setFilteredYear] = useState('2020');
 
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
+  };
+
+  return (
+    <div>
+      <Card className='expenses'>
+        <ExpensesFilter
+          selected={filteredYear}
+          onChangeFilter={filterChangeHandler}
+        />
+        {props.items.map((expense) => (
+          <ExpenseItem
+            key={expense.id}
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+          />
+        ))}
+      </Card>
+    </div>
+  );
+};
+
+//add such a key by id 
 
 export default Expenses;
