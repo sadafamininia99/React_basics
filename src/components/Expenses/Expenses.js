@@ -15,5 +15,7 @@ const Expenses = ({ items }) => {
     </Card>
   );
 }
+//map throw the expense items
+
 
 export default Expenses;
