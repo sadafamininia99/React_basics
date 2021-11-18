@@ -32,3 +32,10 @@ const Expenses = (props) => {
 };
 
 export default Expenses;
+
+//note : Do not use indexs as keys
+//ou may wonder, why don’t we just use indexes as keys when looping through an array. 
+// Although, many developers have done that in their code it is not necessarily ideal
+//  React recommends that you do not use indexes as keys,
+  // since it could impact performance negatively and could lead to some unstable component behaviour.
+
