@@ -22,3 +22,4 @@ const Chart = (props) => {
 };
 
 export default Chart;
+// /chart js
